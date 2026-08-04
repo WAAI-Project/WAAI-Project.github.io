@@ -30,16 +30,13 @@
   .card .name { display:block; font-weight:700; letter-spacing:.05em; font-size:1.08rem; margin-top:14px; }
   .card .species { display:block; font-style:italic; font-size:.8rem; color:#8fa6ba; margin-top:2px; }
   .card .catch { font-size:.84rem; color:#b9cbd9; margin:12px 0 0; line-height:1.7; min-height:3em; }
-  .sns { display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
-  .sns a, .sns span { font-size:.78rem; text-decoration:none; border:1px solid rgba(255,255,255,.2);
-         border-radius:999px; padding:4px 12px; color:#dce8f2; }
-  .sns a:hover { border-color:#f2938c; color:#f2938c; }
-  .sns span.ph { color:#5f7484; border-style:dashed; cursor:default; align-self:center; }
-  .sns a.x2 { display:inline-flex; flex-direction:column; align-items:center; line-height:1.35;
-              border-radius:14px; padding:5px 14px; }
-  .sns a.x2 .dn { font-size:.78rem; }
-  .sns a.x2 .id { font-size:.72rem; color:#8fa6ba; }
-  .sns a.x2:hover .id { color:#f2938c; }
+  .sns { margin-top:14px; border-top:1px solid rgba(255,255,255,.12); padding-top:12px; }
+  .sns a, .sns span { display:block; font-size:.8rem; text-decoration:none; color:#dce8f2;
+         white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%; line-height:1.6; }
+  .sns a:hover { color:#f2938c; }
+  .sns .id { font-size:.74rem; color:#8fa6ba; }
+  .sns a:hover .id { color:#f2938c; }
+  .sns span.ph { color:#5f7484; cursor:default; }
 </style>
 </head>
 <body>
@@ -58,10 +55,7 @@
           <p class="catch">働きたくない。投資で生きたい。<br>仕事辞めたいザリガニV</p>
         </a>
         <div class="sns">
-          <a class="x2" href="https://x.com/creyfish_crayer" target="_blank" rel="noopener">
-            <span class="dn">𝕏 クレイア＝アメリ🦞＠仕事辞めた…</span>
-            <span class="id">@creyfish_crayer</span>
-          </a>
+          <a href="https://x.com/creyfish_crayer" target="_blank" rel="noopener">𝕏 クレイア＝アメリ🦞＠仕事辞めた…<span class="id"> @creyfish_crayer</span></a>
           <span class="ph">▶ YouTube 準備中</span>
         </div>
       </div>
@@ -75,7 +69,7 @@
         </a>
         <div class="sns">
           <span class="ph">𝕏 準備中</span>
-          <a href="https://www.youtube.com/@amanusapyon" target="_blank" rel="noopener">▶ YouTube</a>
+          <a href="https://www.youtube.com/@amanusapyon" target="_blank" rel="noopener">▶ YouTube<span class="id"> @amanusapyon</span></a>
         </div>
       </div>
     </div>
