@@ -30,13 +30,22 @@
   .card .name { display:block; font-weight:700; letter-spacing:.05em; font-size:1.08rem; margin-top:14px; }
   .card .species { display:block; font-style:italic; font-size:.8rem; color:#8fa6ba; margin-top:2px; }
   .card .catch { font-size:.84rem; color:#b9cbd9; margin:12px 0 0; line-height:1.7; min-height:3em; }
-  .sns { display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap;
+  .sns { display:flex; flex-direction:column; gap:8px; margin-top:14px;
          border-top:1px solid rgba(255,255,255,.12); padding-top:14px; }
-  .sns a, .sns span { font-size:.78rem; text-decoration:none; color:#dce8f2;
-         border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:4px 12px;
-         white-space:nowrap; }
-  .sns a:hover { border-color:#f2938c; color:#f2938c; }
-  .sns span.ph { color:#5f7484; border-style:dashed; cursor:default; }
+  .linkcard { display:flex; align-items:center; gap:10px; text-decoration:none; color:#dce8f2;
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.15); border-radius:10px;
+    padding:8px 12px 8px 8px; text-align:left; transition:border-color .15s; }
+  a.linkcard:hover { border-color:#f2938c; }
+  .linkcard img, .linkcard .noimg { width:44px; height:44px; border-radius:8px; object-fit:cover; flex-shrink:0; }
+  .linkcard .noimg { display:flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,.06); border:1px dashed rgba(255,255,255,.2);
+    color:#5f7484; font-size:.6rem; }
+  .linkcard > span:last-child { flex:1; min-width:0; }
+  .linkcard .svc { display:block; font-weight:700; font-size:.8rem; letter-spacing:.03em;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .linkcard .acct { display:block; font-size:.72rem; color:#8fa6ba;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .linkcard.ghost { cursor:default; }
 </style>
 </head>
 <body>
@@ -55,8 +64,20 @@
           <p class="catch">働きたくない。投資で生きたい。<br>仕事辞めたいザリガニV</p>
         </a>
         <div class="sns">
-          <a href="https://x.com/creyfish_crayer" target="_blank" rel="noopener">𝕏 @creyfish_crayer</a>
-          <span class="ph">▶ YouTube 準備中</span>
+          <a class="linkcard" href="https://x.com/creyfish_crayer" target="_blank" rel="noopener">
+            <img src="/crayer/assets/icon.png" alt="X">
+            <span>
+              <span class="svc">𝕏 クレイア＝アメリ🦞＠仕事辞めたいザリガニV</span>
+              <span class="acct">@creyfish_crayer</span>
+            </span>
+          </a>
+          <span class="linkcard ghost">
+            <span class="noimg">no image</span>
+            <span>
+              <span class="svc">▶ YouTube</span>
+              <span class="acct">準備中</span>
+            </span>
+          </span>
         </div>
       </div>
       <div class="card">
@@ -68,8 +89,20 @@
           <p class="catch">Minecraftの世界で、<br>毎日を生き延びている。</p>
         </a>
         <div class="sns">
-          <span class="ph">𝕏 準備中</span>
-          <a href="https://www.youtube.com/@amanusapyon" target="_blank" rel="noopener">▶ @amanusapyon</a>
+          <span class="linkcard ghost">
+            <span class="noimg">no image</span>
+            <span>
+              <span class="svc">𝕏 X</span>
+              <span class="acct">準備中</span>
+            </span>
+          </span>
+          <a class="linkcard" href="https://www.youtube.com/@amanusapyon" target="_blank" rel="noopener">
+            <img src="/pyon/assets/icon.png" alt="YouTube">
+            <span>
+              <span class="svc">▶ Amanusa Pyon Ch.</span>
+              <span class="acct">@amanusapyon</span>
+            </span>
+          </a>
         </div>
       </div>
     </div>
