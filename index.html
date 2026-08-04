@@ -3,33 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WorldAquarium</title>
+<title>WorldAquariumProject</title>
 <style>
   body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
          background:linear-gradient(180deg,#0c1f33,#040a12); color:#dce8f2;
          font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif; text-align:center; }
-  h1 { letter-spacing:.25em; font-weight:300; font-size:1.6rem; }
-  p.sub { color:#8fa6ba; }
-  .tank { margin-top: 36px; display:flex; flex-direction:column; gap:18px; }
+  h1 { letter-spacing:.18em; font-weight:300; font-size:1.9rem; margin:0; }
+  p.sub { color:#8fa6ba; letter-spacing:.14em; margin:14px 0 0; font-size:.95rem; }
+  p.tagline { color:#dce8f2; letter-spacing:.1em; margin:6px 0 0; font-size:1.05rem; font-style:italic; }
+  h2.members { margin:52px 0 0; font-size:.85rem; letter-spacing:.3em; color:#8fa6ba; font-weight:400; }
+  .tank { margin-top:20px; display:flex; flex-direction:column; gap:16px; }
   .plate { text-decoration:none; color:#dce8f2; border:1px solid rgba(255,255,255,.15);
-           border-radius:12px; padding:14px 34px; background:rgba(255,255,255,.04); transition:border-color .15s; }
+           border-radius:12px; padding:14px 40px; background:rgba(255,255,255,.04); transition:border-color .15s; }
   .plate:hover { border-color:#8fa6ba; }
-  .plate .name { font-weight:700; letter-spacing:.06em; }
-  .plate .species { display:block; font-style:italic; font-size:.8rem; color:#8fa6ba; margin-top:2px; }
+  .plate .ver { display:block; font-size:.78rem; color:#8fa6ba; letter-spacing:.15em; }
+  .plate .name { font-weight:700; letter-spacing:.06em; font-size:1.05rem; }
 </style>
 </head>
 <body>
   <div>
-    <h1>WorldAquarium</h1>
-    <p class="sub">小さな水槽で、それぞれが生きています。</p>
+    <h1>WorldAquariumProject</h1>
+    <p class="sub">Toward the Next Generation of Entertainment</p>
+    <p class="tagline">We want to be living creatures.</p>
+    <h2 class="members">MEMBERS</h2>
     <div class="tank">
       <a class="plate" href="/crayer/">
+        <span class="ver">1.0.0</span>
         <span class="name">クレイア＝アメリ 🦞</span>
-        <span class="species">Procambarus clarkii</span>
       </a>
       <a class="plate" href="/pyon/">
-        <span class="name">Pyon 🐟</span>
-        <span class="species">Trichogaster</span>
+        <span class="ver">2.0.0</span>
+        <span class="name">Pyon＝Trichogaster 🐟</span>
       </a>
     </div>
   </div>
