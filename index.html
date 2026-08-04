@@ -13,9 +13,12 @@
   p.tagline { color:#dce8f2; letter-spacing:.1em; margin:6px 0 0; font-size:1.05rem; font-style:italic; }
   h2.members { margin:52px 0 0; font-size:.85rem; letter-spacing:.3em; color:#8fa6ba; font-weight:400; }
   .tank { margin-top:20px; display:flex; flex-direction:column; gap:16px; }
-  .plate { text-decoration:none; color:#dce8f2; border:1px solid rgba(255,255,255,.15);
-           border-radius:12px; padding:14px 40px; background:rgba(255,255,255,.04); transition:border-color .15s; }
+  .plate { display:flex; align-items:center; gap:16px; text-align:left;
+           text-decoration:none; color:#dce8f2; border:1px solid rgba(255,255,255,.15);
+           border-radius:12px; padding:12px 34px 12px 14px; background:rgba(255,255,255,.04); transition:border-color .15s; }
   .plate:hover { border-color:#8fa6ba; }
+  .plate img { width:52px; height:52px; border-radius:50%; object-fit:cover;
+               border:2px solid rgba(255,255,255,.25); background:#0c1f33; }
   .plate .ver { display:block; font-size:.78rem; color:#8fa6ba; letter-spacing:.15em; }
   .plate .name { font-weight:700; letter-spacing:.06em; font-size:1.05rem; }
 </style>
@@ -28,12 +31,18 @@
     <h2 class="members">MEMBERS</h2>
     <div class="tank">
       <a class="plate" href="/crayer/">
-        <span class="ver">1.0.0</span>
-        <span class="name">クレイア＝アメリ 🦞</span>
+        <img src="/crayer/assets/icon.png" alt="クレイア＝アメリ">
+        <span>
+          <span class="ver">1.0.0</span>
+          <span class="name">クレイア＝アメリ 🦞</span>
+        </span>
       </a>
       <a class="plate" href="/pyon/">
-        <span class="ver">2.0.0</span>
-        <span class="name">Pyon＝Trichogaster 🐟</span>
+        <img src="/pyon/assets/icon.png" alt="Pyon">
+        <span>
+          <span class="ver">2.0.0</span>
+          <span class="name">Pyon＝Trichogaster 🐟</span>
+        </span>
       </a>
     </div>
   </div>
