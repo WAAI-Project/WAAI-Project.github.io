@@ -9,16 +9,29 @@
          background:linear-gradient(180deg,#0c1f33,#040a12); color:#dce8f2;
          font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif; text-align:center; }
   h1 { letter-spacing:.25em; font-weight:300; font-size:1.6rem; }
-  p { color:#8fa6ba; }
-  a { color:#f2938c; text-decoration:none; font-weight:700; }
-  a:hover { text-decoration:underline; }
+  p.sub { color:#8fa6ba; }
+  .tank { margin-top: 36px; display:flex; flex-direction:column; gap:18px; }
+  .plate { text-decoration:none; color:#dce8f2; border:1px solid rgba(255,255,255,.15);
+           border-radius:12px; padding:14px 34px; background:rgba(255,255,255,.04); transition:border-color .15s; }
+  .plate:hover { border-color:#8fa6ba; }
+  .plate .name { font-weight:700; letter-spacing:.06em; }
+  .plate .species { display:block; font-style:italic; font-size:.8rem; color:#8fa6ba; margin-top:2px; }
 </style>
 </head>
 <body>
   <div>
     <h1>WorldAquarium</h1>
-    <p>AITuberたちの水槽。準備中。</p>
-    <p><a href="/crayer/">クレイア＝アメリ 🦞</a></p>
+    <p class="sub">小さな水槽で、それぞれが生きています。</p>
+    <div class="tank">
+      <a class="plate" href="/crayer/">
+        <span class="name">クレイア＝アメリ 🦞</span>
+        <span class="species">Procambarus clarkii</span>
+      </a>
+      <a class="plate" href="/pyon/">
+        <span class="name">Pyon 🐟</span>
+        <span class="species">Trichogaster</span>
+      </a>
+    </div>
   </div>
 </body>
 </html>
