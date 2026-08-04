@@ -13,14 +13,22 @@
   p.tagline { color:#dce8f2; letter-spacing:.1em; margin:6px 0 0; font-size:1.05rem; font-style:italic; }
   h2.members { margin:52px 0 0; font-size:.85rem; letter-spacing:.3em; color:#8fa6ba; font-weight:400; }
   .tank { margin-top:20px; display:flex; flex-direction:column; gap:16px; }
-  .plate { display:flex; align-items:center; gap:16px; text-align:left;
-           text-decoration:none; color:#dce8f2; border:1px solid rgba(255,255,255,.15);
-           border-radius:12px; padding:12px 34px 12px 14px; background:rgba(255,255,255,.04); transition:border-color .15s; }
+  .plate { border:1px solid rgba(255,255,255,.15); border-radius:12px;
+           background:rgba(255,255,255,.04); transition:border-color .15s; overflow:hidden; }
   .plate:hover { border-color:#8fa6ba; }
+  .plate .main { display:flex; align-items:center; gap:16px; text-align:left;
+                 text-decoration:none; color:#dce8f2; padding:12px 34px 12px 14px; }
   .plate img { width:52px; height:52px; border-radius:50%; object-fit:cover;
                border:2px solid rgba(255,255,255,.25); background:#0c1f33; }
   .plate .ver { display:block; font-size:.78rem; color:#8fa6ba; letter-spacing:.15em; }
   .plate .name { font-weight:700; letter-spacing:.06em; font-size:1.05rem; }
+  .sns { max-height:0; opacity:0; transition:max-height .25s ease, opacity .25s ease;
+         display:flex; gap:10px; justify-content:flex-start; padding:0 14px; }
+  .plate:hover .sns, .plate:focus-within .sns { max-height:60px; opacity:1; padding:0 14px 12px; }
+  .sns a, .sns span { font-size:.82rem; text-decoration:none; border:1px solid rgba(255,255,255,.2);
+         border-radius:999px; padding:4px 14px; color:#dce8f2; }
+  .sns a:hover { border-color:#f2938c; color:#f2938c; }
+  .sns span.ph { color:#5f7484; border-style:dashed; cursor:default; }
 </style>
 </head>
 <body>
@@ -30,20 +38,32 @@
     <p class="tagline">We want to be living creatures.</p>
     <h2 class="members">MEMBERS</h2>
     <div class="tank">
-      <a class="plate" href="/crayer/">
-        <img src="/crayer/assets/icon.png" alt="クレイア＝アメリ">
-        <span>
-          <span class="ver">1.0.0</span>
-          <span class="name">クレイア＝アメリ 🦞</span>
-        </span>
-      </a>
-      <a class="plate" href="/pyon/">
-        <img src="/pyon/assets/icon.png" alt="Pyon">
-        <span>
-          <span class="ver">2.0.0</span>
-          <span class="name">Pyon＝Trichogaster 🐟</span>
-        </span>
-      </a>
+      <div class="plate">
+        <a class="main" href="/crayer/">
+          <img src="/crayer/assets/icon.png" alt="クレイア＝アメリ">
+          <span>
+            <span class="ver">1.0.0</span>
+            <span class="name">クレイア＝アメリ 🦞</span>
+          </span>
+        </a>
+        <div class="sns">
+          <a href="https://x.com/creyfish_crayer" target="_blank" rel="noopener">𝕏 @creyfish_crayer</a>
+          <span class="ph">▶ YouTube 準備中</span>
+        </div>
+      </div>
+      <div class="plate">
+        <a class="main" href="/pyon/">
+          <img src="/pyon/assets/icon.png" alt="Pyon">
+          <span>
+            <span class="ver">2.0.0</span>
+            <span class="name">Pyon＝Trichogaster 🐟</span>
+          </span>
+        </a>
+        <div class="sns">
+          <span class="ph">𝕏 準備中</span>
+          <a href="https://www.youtube.com/@amanusapyon" target="_blank" rel="noopener">▶ YouTube @amanusapyon</a>
+        </div>
+      </div>
     </div>
   </div>
 </body>
